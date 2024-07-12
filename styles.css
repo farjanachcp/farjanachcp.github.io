@@ -1,0 +1,139 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-title {
+  font-size: 20px; /* Adjust the font size */
+  font-weight: bold;
+  color: #fff; /* Dark color for the text */
+  text-align: center;
+  margin-bottom: 20px; /* Space below the heading */
+  padding: 10px;
+  background-color: #007bff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.delivery-inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delivery-inputs div {
+  width: 45%; /* Adjust width as needed */
+}
+
+@media (max-width: 600px) {
+  .delivery-inputs div {
+    width: 45%; /* Maintain the same width on mobile */
+    margin-bottom: 10px; /* Add margin bottom for mobile layout */
+  }
+}
+
+.time-inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.time-inputs div {
+  width: 45%; /* Adjust width as needed */
+}
+
+@media (max-width: 600px) {
+  .time-inputs div {
+    width: 45%; /* Maintain the same width on mobile */
+    margin-bottom: 0; /* Remove margin bottom for mobile layout */
+  }
+}
+
+input[type="text"],
+input[type="number"],
+select,
+button {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.output {
+  margin-top: 20px;
+}
+
+.success-message {
+  color: green;
+  font-size: 14px;
+  margin-top: 10px;
+  display: none;
+}
+
+.success-message.show {
+  display: block;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  height: 200px;
+}
+
+button.copy {
+  margin-top: 10px;
+}
+
+.made-with-love {
+  font-size: 12px; /* Adjust the font size as needed */
+  margin-top: 20px;
+}
+
+.made-with-love a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.alert {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+@media (max-width: 600px) {
+  .form-group {
+    margin-bottom: 10px;
+  }
+}

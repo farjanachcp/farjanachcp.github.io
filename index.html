@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delivery Post</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <center><h2 class="form-title">ফেসবুক পোস্ট তৈরির ফর্ম</h2></center>
+    <form id="announcementForm">
+      <div class="form-group">
+        <div class="delivery-inputs">
+          <div>
+            <label for="deliveryNo">Delivery No.</label>
+            <input type="text" id="deliveryNo" name="deliveryNo" inputmode="numeric" pattern="[0-9]*" placeholder="000" required>
+          </div>
+          <div>
+            <label for="deliveryDate">Delivery Date</label>
+            <input type="date" id="deliveryDate" name="deliveryDate" required>
+          </div>
+        </div>
+      </div>      
+      <div class="form-group">
+        <label for="motherName">মায়ের পুরো নাম (বাংলায়)</label>
+        <input type="text" id="motherName" name="motherName" required>
+      </div>
+      <div class="form-group">
+        <label for="babyWeight">Baby's Weight (in kg)</label>
+        <input type="number" id="babyWeight" name="babyWeight" step="0.1" placeholder="0.0" required>
+      </div>
+      <div class="form-group">
+        <label for="babySex">Baby's Gender</label>
+        <select id="babySex" name="babySex" required>
+          <option value="">Select</option>
+          <option value="ছেলে">ছেলে</option>
+          <option value="মেয়ে">মেয়ে</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="timeOfDay">Delivery Time (ডেলিভারির সময়)</label>
+        <select id="timeOfDay" name="timeOfDay" required>
+          <option value="">Select</option>
+          <option value="ভোর">ভোর</option>
+          <option value="সকাল">সকাল</option>
+          <option value="দুপুর">দুপুর</option>
+          <option value="বিকাল">বিকাল</option>
+          <option value="সন্ধ্যা">সন্ধ্যা</option>
+          <option value="রাত">রাত</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <div class="time-inputs">
+          <div>
+            <label for="hourTime">Hour (কয় টায়)</label>
+            <input type="number" id="hourTime" name="hourTime" min="1" max="12" step="1" placeholder="0" required>
+          </div>
+          <div>
+            <label for="minuteTime">Minute</label>
+            <input type="number" id="minuteTime" name="minuteTime" min="0" max="59" step="1" placeholder="0">
+          </div>
+        </div>
+      </div>      
+      <button type="button" onclick="generateText()">লেখা তৈরি করুন</button>
+      <div id="successMessage" class="success-message"></div>
+    </form>
+    <div class="output">
+      <textarea id="announcementText" rows="10" readonly></textarea>
+      <button onclick="copyText()">Copy</button>
+    </div>
+    <div id="alertsContainer"></div>
+    <p class="made-with-love">
+      Made with ❤️ - কপিরাইট (c) <a href="https://facebook.com/rez1coder" target="_blank">সীমান্ত</a>
+    </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
