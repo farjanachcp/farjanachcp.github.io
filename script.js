@@ -45,12 +45,12 @@ function validateTimeOfDay() {
 
 function validateHourTime() {
   const hourTime = document.getElementById('hourTime').value;
-  toggleAlert('hourTime', (hourTime >= 1 && hourTime <= 12) ? '' : '1 থেকে 12 এর মধ্যে লিখুন');
+  toggleAlert('hourTime', (hourTime >= 1 && hourTime <= 12 && Number.isInteger(Number(hourTime))) ? '' : '1 থেকে 12 এর মধ্যে লিখুন');
 }
 
 function validateMinuteTime() {
   const minuteTime = document.getElementById('minuteTime').value;
-  toggleAlert('minuteTime', (minuteTime >= 0 && minuteTime <= 59) || minuteTime === '' ? '' : '0 থেকে 59 এর মধ্যে লিখুন');
+  toggleAlert('minuteTime', (minuteTime === '' || (minuteTime >= 0 && minuteTime <= 59 && Number.isInteger(Number(minuteTime)))) ? '' : '0 থেকে 59 এর মধ্যে লিখুন');
 }
 
 function toggleAlert(inputId, message) {
